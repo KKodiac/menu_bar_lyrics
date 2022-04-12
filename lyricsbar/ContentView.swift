@@ -57,7 +57,6 @@ struct ListView: View {
                 .onTapGesture {
                     switch option.title {
                     case "Home": currentMenu = 0
-                        
                     case "Lyrics": currentMenu = 1
                     case "Preference": currentMenu = 2
                     case "Info": currentMenu = 3
