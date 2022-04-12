@@ -11,15 +11,19 @@
 		0B1396472800064E0047D523 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1396462800064E0047D523 /* ContentView.swift */; };
 		0B1396492800064F0047D523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1396482800064F0047D523 /* Assets.xcassets */; };
 		0B13964C2800064F0047D523 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B13964B2800064F0047D523 /* Preview Assets.xcassets */; };
+		0B139656280008C20047D523 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0B139655280008C20047D523 /* Alamofire */; };
+		0B139658280009270047D523 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B139657280009270047D523 /* StatusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B1396412800064E0047D523 /* lyricsbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lyricsbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1396442800064E0047D523 /* lyricsbarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lyricsbarApp.swift; sourceTree = "<group>"; };
 		0B1396462800064E0047D523 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B1396482800064F0047D523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B13964B2800064F0047D523 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B13964D2800064F0047D523 /* lyricsbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lyricsbar.entitlements; sourceTree = "<group>"; };
+		0B139657280009270047D523 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		0B3D19892805C64200C34A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0BAEADC92801E3320012995C /* lyricsbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lyricsbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B139656280008C20047D523 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,25 +42,19 @@
 			isa = PBXGroup;
 			children = (
 				0B1396432800064E0047D523 /* lyricsbar */,
-				0B1396422800064E0047D523 /* Products */,
+				0BAEADC92801E3320012995C /* lyricsbar.app */,
 			);
-			sourceTree = "<group>";
-		};
-		0B1396422800064E0047D523 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0B1396412800064E0047D523 /* lyricsbar.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0B1396432800064E0047D523 /* lyricsbar */ = {
 			isa = PBXGroup;
 			children = (
-				0B1396442800064E0047D523 /* lyricsbarApp.swift */,
+				0B3D19892805C64200C34A90 /* Info.plist */,
+				0B139657280009270047D523 /* StatusBar.swift */,
 				0B1396462800064E0047D523 /* ContentView.swift */,
 				0B1396482800064F0047D523 /* Assets.xcassets */,
 				0B13964D2800064F0047D523 /* lyricsbar.entitlements */,
+				0B1396442800064E0047D523 /* lyricsbarApp.swift */,
 				0B13964A2800064F0047D523 /* Preview Content */,
 			);
 			path = lyricsbar;
@@ -85,8 +84,11 @@
 			dependencies = (
 			);
 			name = lyricsbar;
+			packageProductDependencies = (
+				0B139655280008C20047D523 /* Alamofire */,
+			);
 			productName = lyricsbar;
-			productReference = 0B1396412800064E0047D523 /* lyricsbar.app */;
+			productReference = 0BAEADC92801E3320012995C /* lyricsbar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +115,10 @@
 				Base,
 			);
 			mainGroup = 0B1396382800064E0047D523;
-			productRefGroup = 0B1396422800064E0047D523 /* Products */;
+			packageReferences = (
+				0B139654280008C20047D523 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 0B1396382800064E0047D523;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -141,6 +146,7 @@
 			files = (
 				0B1396472800064E0047D523 /* ContentView.swift in Sources */,
 				0B1396452800064E0047D523 /* lyricsbarApp.swift in Sources */,
+				0B139658280009270047D523 /* StatusBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +280,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lyricsbar/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +308,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lyricsbar/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B139654280008C20047D523 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B139655280008C20047D523 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B139654280008C20047D523 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B1396392800064E0047D523 /* Project object */;
 }
